@@ -10,18 +10,18 @@ import javax.faces.context.FacesContext;
 import com.sun.security.ntlm.Client;
 
 import br.com.faculdadedelta.dao.DAO;
-import br.com.faculdadedelta.modelo.DescricaoRichard;
+import br.com.faculdadedelta.modelo.DescricaoDarcisio;
 
 @ManagedBean
-public class ControllerBensRichard {
-	private DescricaoRichard desc = new DescricaoRichard();
+public class ControllerBensDarcisio {
+	private DescricaoDarcisio desc = new DescricaoDarcisio();
 	private DAO dao = new DAO();
-	public DescricaoRichard getCliente() {
+	public DescricaoDarcisio getCliente() {
 		return desc;
 	}
 
 
-	public void setCliente(DescricaoRichard desc) {
+	public void setCliente(DescricaoDarcisio desc) {
 		this.desc = desc;
 	}
 
@@ -40,8 +40,8 @@ public class ControllerBensRichard {
 		return "index.xhtml";
 	}
 	
-	public List<DescricaoRichard> getLista() {
-		List<DescricaoRichard> listaRetorno = new ArrayList<DescricaoRichard>();
+	public List<DescricaoDarcisio> getLista() {
+		List<DescricaoDarcisio> listaRetorno = new ArrayList<DescricaoDarcisio>();
 		try {
 			listaRetorno = dao.listar();
 		} catch (ClassNotFoundException | SQLException e) {
