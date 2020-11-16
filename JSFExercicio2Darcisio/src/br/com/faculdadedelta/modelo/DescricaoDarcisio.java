@@ -1,16 +1,16 @@
 package br.com.faculdadedelta.modelo;
 
-public class DescricaoRichard {
+public class DescricaoDarcisio {
 	private long id;
 	private String desc;
 	private String especificacao;
 	private String dep;
 	private int valor;
 	private int data;
-	public DescricaoRichard() {
+	public DescricaoDarcisio () {
 		super();
 	}
-	public DescricaoRichard(long id, String desc, String especificacao, String dep, int valor,
+	public DescricaoDarcisio (long id, String desc, String especificacao, String dep, int valor,
 			int data) {
 		super();
 		this.id = id;
@@ -71,7 +71,7 @@ public class DescricaoRichard {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		DescricaoRichard other = (DescricaoRichard) obj;
+		DescricaoDarcisio other = (DescricaoDarcisio) obj;
 		if (id != other.id)
 			return false;
 		return true;
