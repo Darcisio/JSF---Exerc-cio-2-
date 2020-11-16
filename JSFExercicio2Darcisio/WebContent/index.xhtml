@@ -14,21 +14,21 @@
 		<h:form>
 			<h:panelGrid columns="2">
 				<h:outputText value="Descrição: "/>
-				<h:inputText value="#{controllerBensRichard.desc.desc}" required="true" requiredMessage="O campo Descrição é obrigatório"/>
+				<h:inputText value="#{controllerBensDarcisio.desc.desc}" required="true" requiredMessage="O campo Descrição é obrigatório"/>
 				
 				<h:outputText value="Especificação do Bem: "/>
-				<h:inputText value="#{controllerBensRichard.desc.especificacao}" required="true" requiredMessage="O campo Especificação do Bem é obrigatório"/>
+				<h:inputText value="#{controllerBensDarcisio.desc.especificacao}" required="true" requiredMessage="O campo Especificação do Bem é obrigatório"/>
 				
 				<h:outputText value="Departamento a Ser Alocado: "/>
-				<h:inputText value="#{controllerBensRichard.desc.dep}" required="true" requiredMessage="O campo Departamento a Ser Alocado é obrigatório"/>
+				<h:inputText value="#{controllerBensDarcisio.desc.dep}" required="true" requiredMessage="O campo Departamento a Ser Alocado é obrigatório"/>
 				
 				<h:outputText value="Valor do Bem: "/>
-				<h:inputText minlength="10" value="#{controllerBensRichard.desc.valor}" required="true" requiredMessage="o campo Valor do Bem é obrigatório"/>
+				<h:inputText minlength="10" value="#{controllerBensDarcisio.desc.valor}" required="true" requiredMessage="o campo Valor do Bem é obrigatório"/>
 				
 				<h:outputText value="Data de cadastro: "/>
-				<h:inputText type="date" value="#{controllerClienteRichard.cliente.data}" required="true" requiredMessage="O campo Data de cadastro é obrigatório"/>
+				<h:inputText type="date" value="#{controllerClienteDarcisio.cliente.data}" required="true" requiredMessage="O campo Data de cadastro é obrigatório"/>
 				
-				<h:commandButton value="Salvar" action="#{controllerClienteRichard.salvar}"/>
+				<h:commandButton value="Salvar" action="#{controllerClienteDarcisio.salvar}"/>
 				<h:commandButton value="Limpar" />
 			</h:panelGrid>
 		</h:form>
