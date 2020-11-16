@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import br.com.faculdadedelta.modelo.DescricaoRichard;
+import br.com.faculdadedelta.modelo.DescricaoDarcisio;
 import br.com.faculdadedelta.util.Conexao;
 
 public class DAO {
-	public void incluir(DescricaoRichard desc) throws ClassNotFoundException, SQLException {
+	public void incluir(DescricaoDarcisio desc) throws ClassNotFoundException, SQLException {
 		Conexao conexao = new Conexao();
 		Connection connect = conexao.conectarNoBanco();
 		String sql = "INSERT cliente (desc_cliente, desc_servico, valor_unitario_servico, qtde_servico, data_exec_servico) VALUES (?, ?, ?, ?, ?)";
@@ -28,7 +28,7 @@ public class DAO {
 		connect.close();
 	}
 	
-	public void alterarCliente(DescricaoRichard cliente) throws ClassNotFoundException, SQLException {
+	public void alterarCliente(DescricaoDarcisio cliente) throws ClassNotFoundException, SQLException {
 		Conexao conexao = new Conexao();
 		Connection connect = conexao.conectarNoBanco();
 		String sql = "UPDATE cliente SET desc_cliente = ?,  desc_servico = ?, valor_unitario_servico = ?, qtde_servico = ?, data_exec_servico = ? WHERE id = ?";
@@ -44,7 +44,7 @@ public class DAO {
 		connect.close();
 	}
 	
-	public void excluir(DescricaoRichard cliente) throws ClassNotFoundException, SQLException {
+	public void excluir(DescricaoDarcisio cliente) throws ClassNotFoundException, SQLException {
 		Conexao conexao = new Conexao();
 		Connection connect = conexao.conectarNoBanco();
 		String sql = "DELETE FROM alunos WERE id = ?";
@@ -56,15 +56,15 @@ public class DAO {
 		connect.close();
 	}
 	
-	public List<DescricaoRichard> listar() throws ClassNotFoundException, SQLException {
+	public List<DescricaoDarcisio> listar() throws ClassNotFoundException, SQLException {
 		Conexao conexao = new Conexao();
 		Connection connect = conexao.conectarNoBanco();
 		String sql = "SELECT * FROM cliente";
 		PreparedStatement ps = connect.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
-		List<DescricaoRichard> listaRetorno = new ArrayList<DescricaoRichard>();
+		List<DescricaoDarcisio> listaRetorno = new ArrayList<DescricaoDarcisio>();
 		while(rs.next()) {
-			DescricaoRichard cliente = new DescricaoRichard();		
+			DescricaoDarcisio cliente = new DescricaoDarcisio();		
 			cliente.setId(rs.getLong("id"));
 			cliente.setDesc(rs.getString("desc_descricao"));
 			cliente.setEspecificacao(rs.getString("desc_especificacao"));
